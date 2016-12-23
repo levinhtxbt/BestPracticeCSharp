@@ -43,10 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountStatus.cs" />
-    <Compile Include="Constants.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\AccountDiscountCalculator.cs" />
+    <Compile Include="Utils\AccountStatus.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\DefaultAccountDiscountCalculatorFactory.cs" />
+    <Compile Include="LoyaltyDiscountCalculator\DefaultLoyaltyDiscountCalculator.cs" />
     <Compile Include="DiscountManager.cs" />
-    <Compile Include="PriceExtensions.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\IAccountDiscountCalculator.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\IAccountDiscountCalculatorFactory.cs" />
+    <Compile Include="LoyaltyDiscountCalculator\ILoyaltyDiscountCalculator.cs" />
+    <Compile Include="Utils\PriceExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

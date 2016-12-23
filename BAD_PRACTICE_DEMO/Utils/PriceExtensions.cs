@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BAD_PRACTICE_DEMO
+namespace BAD_PRACTICE_DEMO.Utils
 {
     public static class PriceExtensions
     {
