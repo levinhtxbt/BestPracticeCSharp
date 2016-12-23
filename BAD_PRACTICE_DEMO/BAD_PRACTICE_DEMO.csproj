@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountStatus.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="DiscountManager.cs" />
+    <Compile Include="PriceExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
