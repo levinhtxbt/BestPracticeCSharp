@@ -11,6 +11,9 @@ namespace BAD_PRACTICE_DEMO.Utils
         NotRegistered = 1,
         SimpleCustomer = 2,
         ValuableCustomer = 3,
-        MostValuableCustomer = 4
+        MostValuableCustomer = 4,
+        SimpleCustomerExtended = 5,
+        ValuableCustomerExtended = 6,
+        MostValuableCustomerExtended = 7
     }
 }

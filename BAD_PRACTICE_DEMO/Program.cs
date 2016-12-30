@@ -22,6 +22,25 @@ namespace BAD_PRACTICE_DEMO
             decimal priceAfterDiscount = discountManager.ApplyDiscount(price, accountStatus, time);
             Console.WriteLine(priceAfterDiscount);
 
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingAutoFac(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingLazy(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingConfigurationOutsideCode(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingConfigurationOutsideCodeLazyVersion(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingDictionaryButNewInstance(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingConfigurationOutsiteCodeFromConfigurationFile(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
             Console.ReadKey();
 
         }

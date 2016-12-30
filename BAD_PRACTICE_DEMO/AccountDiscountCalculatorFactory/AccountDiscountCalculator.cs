@@ -38,4 +38,13 @@ namespace BAD_PRACTICE_DEMO.AccountDiscountCalculatorFactory
             return price - (Constants.DISCOUNT_FOR_MOST_VALUABLE_CUSTOMERS * price);
         }
     }
+
+    //This is class extend
+    public class MostValuableCustomerDiscountCalculatorExtend 
+    {
+        public decimal ApplyDiscount(decimal price)
+        {
+            return price - (Constants.DISCOUNT_FOR_MOST_VALUABLE_CUSTOMERS * price);
+        }
+    }
 }

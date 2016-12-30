@@ -33,7 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.2.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountDiscountCalculatorFactory\AccountDiscountCalculator.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\ConfigurableAccountDiscountCalculatorFactory.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\ConfigurableAccountDiscountCalculatorFactoryFromConfigurationFile.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\ConfigurableLazyAccountDiscountCalculatorFactory.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\DictionarableAccountDiscountCalculatorFactory.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\DictionarableAccountDiscountCalculatorFactoryNewInstance.cs" />
+    <Compile Include="AccountDiscountCalculatorFactory\DictionarableLazyAccountDiscountCalculatorFactory.cs" />
     <Compile Include="Utils\AccountStatus.cs" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="AccountDiscountCalculatorFactory\DefaultAccountDiscountCalculatorFactory.cs" />
@@ -58,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
