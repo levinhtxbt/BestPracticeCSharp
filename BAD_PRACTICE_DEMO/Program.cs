@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BAD_PRACTICE_DEMO.AccountDiscountCalculatorFactory;
+using BAD_PRACTICE_DEMO.LoyaltyDiscountCalculator;
+using BAD_PRACTICE_DEMO.Utils;
 
 namespace BAD_PRACTICE_DEMO
 {
@@ -10,6 +13,36 @@ namespace BAD_PRACTICE_DEMO
     {
         static void Main(string[] args)
         {
+            decimal price = 50000;
+            AccountStatus accountStatus = AccountStatus.SimpleCustomer;
+            int time = 4;
+
+            DiscountManager discountManager = new DiscountManager(new DefaultAccountDiscountCalculatorFactory(), new DefaultLoyaltyDiscountCalculator());
+
+            decimal priceAfterDiscount = discountManager.ApplyDiscount(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingAutoFac(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingLazy(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingConfigurationOutsideCode(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingConfigurationOutsideCodeLazyVersion(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingDictionaryButNewInstance(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            priceAfterDiscount = discountManager.ApplyDiscountUsingConfigurationOutsiteCodeFromConfigurationFile(price, accountStatus, time);
+            Console.WriteLine(priceAfterDiscount);
+
+            Console.ReadKey();
+
         }
     }
 }
